@@ -17,7 +17,7 @@ server.use(Express.static(path.join(__dirname, '../public')))
 server.use(router)
 
 server.use((req, res) => {
-  res.send('pagina não encontrada')
+  res.render('pages/404')
 })
 
 server.listen(process.env.PORT, () => console.log('🔥 Server on fire at port 3333!'))
